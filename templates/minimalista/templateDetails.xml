@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="template" client="site" version="2.0.7" method="upgrade">
+    <name>minimalista</name>
+    <version>2.0.7</version>
+    <creationDate>2023-01</creationDate>
+    <author>Eleésio</author>
+    <authorEmail>souzaeleesio@gmail.com</authorEmail>
+    <copyright>(C) 2023 Eleésio</copyright>
+    <description>TPL_MINIMALISTA_XML_DESCRIPTION</description>
+    <inheritable>1</inheritable>
+    <files>
+        <filename>component.php</filename>
+        <filename>error.php</filename>
+        <filename>index.php</filename>
+        <filename>logic.php</filename>
+        <filename>offline.php</filename>
+        <filename>templateDetails.xml</filename>
+        <folder>html</folder>
+    </files>
+    <media destination="templates/site/minimalista" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+        <folder>images</folder>
+    </media>
+    <positions>
+        <position>topbar</position>
+        <position>below-top</position>
+        <position>menu</position>
+        <position>search</position>
+        <position>banner</position>
+        <position>top-a</position>
+        <position>top-b</position>
+        <position>main-top</position>
+        <position>main-bottom</position>
+        <position>breadcrumbs</position>
+        <position>sidebar-left</position>
+        <position>sidebar-right</position>
+        <position>bottom-a</position>
+        <position>bottom-b</position>
+        <position>footer</position>
+        <position>debug</position>
+    </positions>
+    <!-- configs -->
+    <!-- container-fluid, default-bootstrap-desktop. sidebar-width -->
+    <config>
+        <fields name="params">
+            <fieldset name="options">
+                <field name="container-fluid" type="radio" label="TPL_MINIMALISTA_CONTAINER_FLUID" description="TPL_MINIMALISTA_CONTAINER_FLUID_DESC" default="0" class="btn-group btn-group-yesno">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+              <field name="default-bootstrap-desktop" type="radio" label="TPL_MINIMALISTA_DEFAULT_BOOTSTRAP_DESKTOP" description="TPL_MINIMALISTA_DEFAULT_BOOTSTRAP_DESKTOP_DESC" default="lg" class="btn-group">
+                    <option value="xxl">xxl</option>
+                    <option value="xl">xl</option>
+                    <option value="lg">lg</option>
+                    <option value="md">md</option>
+                    <option value="sm">sm</option>
+                </field>
+                <field name="sidebar-width" type="radio" default="3" label="TPL_MINIMALISTA_SIDEBAR_WIDTH" description="TPL_MINIMALISTA_SIDEBAR_WIDTH_DESC" class="btn-group">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/tpl_minimalista.ini</language>
+        <language tag="en-GB">en-GB/tpl_minimalista.sys.ini</language>
+        <language tag="pt-BR">pt-BR/tpl_minimalista.ini</language>
+        <language tag="pt-BR">pt-BR/tpl_minimalista.sys.ini</language>
+    </languages>
+</extension>

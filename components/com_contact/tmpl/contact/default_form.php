@@ -30,7 +30,7 @@ $wa->useScript('keepalive')
             <?php if (count($fields)) : ?>
                 <fieldset class="m-0">
                     <?php if (isset($fieldset->label) && ($legend = trim(Text::_($fieldset->label))) !== '') : ?>
-                        <legend><?php echo $legend; ?></legend>
+                        <legend style="text-align:center;"><?php echo $legend; ?></legend>
                     <?php endif; ?>
                     <?php foreach ($fields as $field) : ?>
                         <?php echo $field->renderField(); ?>
@@ -41,9 +41,9 @@ $wa->useScript('keepalive')
         <?php if ($this->captchaEnabled) : ?>
             <?php echo $this->form->renderFieldset('captcha'); ?>
         <?php endif; ?>
-        <div class="control-group">
+        <div class="control-group enviar">
             <div class="controls">
-                <button class="btn btn-primary validate" type="submit"><?php echo Text::_('COM_CONTACT_CONTACT_SEND'); ?></button>
+                <button class="btn btn-primary validate btn-right" type="submit"><?php echo Text::_('COM_CONTACT_CONTACT_SEND'); ?></button>
                 <input type="hidden" name="option" value="com_contact">
                 <input type="hidden" name="task" value="contact.submit">
                 <input type="hidden" name="return" value="<?php echo $this->return_page; ?>">
@@ -53,3 +53,4 @@ $wa->useScript('keepalive')
         </div>
     </form>
 </div>
+

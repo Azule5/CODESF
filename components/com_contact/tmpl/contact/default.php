@@ -34,17 +34,7 @@ $htag2   = ($tparams->get('show_page_heading') && $tparams->get('show_name')) ? 
         </h1>
     <?php endif; ?>
 
-    <?php if ($this->item->name && $tparams->get('show_name')) : ?>
-        <div class="page-header">
-            <<?php echo $htag; ?>>
-                <?php if ($this->item->published == 0) : ?>
-                    <span class="badge bg-warning text-light"><?php echo Text::_('JUNPUBLISHED'); ?></span>
-                <?php endif; ?>
-                <span class="contact-name"><?php echo $this->item->name; ?></span>
-            </<?php echo $htag; ?>>
-        </div>
-    <?php endif; ?>
-
+    
     <?php if ($canEdit) : ?>
         <div class="icons">
             <div class="float-end">
