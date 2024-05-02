@@ -43,15 +43,16 @@ $categoryId = $db->loadResult();
 
 if (!empty($categoryId)) {
     $articlesQuery = $db->getQuery(true)
-        ->select($db->quoteName(array('id', 'title', 'alias', 'introtext', 'catid')))
+        ->select($db->quoteName(array('id', 'title', 'alias', 'introtext', 'catid', 'state'))) // Adicionando 'state' à seleção
         ->from($db->quoteName('#__content'))
         ->where($db->quoteName('catid') . ' = ' . (int)$categoryId)
+        ->where($db->quoteName('state') . ' = 1') // Somente artigos publicados
         ->order($db->quoteName('publish_up') . ' DESC');
     $db->setQuery($articlesQuery);
     $articles = $db->loadAssocList();
 }
 
-// Filter articles by category "home"
+// Filter articles by category "home" and state = published (state = 1)
 if (!empty($articles)) {
     $categoriaHome = 2; // Substitua pelo ID correto da categoria "home"
     $articles_home = array_filter($articles, function ($article) use ($categoriaHome) {
@@ -63,7 +64,7 @@ if (!empty($articles)) {
         return $a['id'] <=> $b['id'];
     });
 
-    // Output the filtered articles
+    // Output the filtered and published articles
     foreach ($articles_home as $article) {
         echo '<section>';
         echo '<div class="row">';
@@ -74,6 +75,6 @@ if (!empty($articles)) {
         echo '</section>';
     }
 } else {
-    echo 'No articles found in the "home" category.';
+    echo 'No published articles found in the "home" category.';
 }
 ?>
