@@ -16,7 +16,7 @@ class JConfig {
 	public $host = 'localhost';
 	public $user = 'root';
 	public $password = '';
-	public $db = 'codesf';
+	public $db = 'id22113229_codesf';
 	public $dbprefix = 'forox_';
 	public $dbencryption = 0;
 	public $dbsslverifyservercert = false;
