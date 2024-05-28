@@ -309,7 +309,6 @@ body {
 
 .accordion-item {
     margin-bottom: 10px;
-    /* Added margin to each item */
     border: 1px solid #ddd;
     border-radius: 8px;
 }
@@ -466,9 +465,6 @@ body {
     text-align: justify;
 }
 
-
-/*Testando*/
-
 .banner-container {
     position: relative;
     width: 100%;
@@ -477,12 +473,10 @@ body {
 
 .image-banner {
     background-image: url('../images/camaraTecnica/saneamentoBasico.bmp');
-    /* Substitua pelo caminho da sua imagem */
     background-size: cover;
     background-position: center center;
     width: 100%;
     height: 250px;
-    /* Ajuste a altura conforme necessário */
 }
 
 .green-banner {
@@ -516,9 +510,6 @@ body {
 .apresentacao p {
     font-size: 20px;
 }
-
-
-/*Testando*/
 
 .form-group {
     margin-bottom: 20px;
@@ -712,18 +703,15 @@ body {
     .section-collaborators {
         display: block;
         margin-bottom: 20px;
-        /* Adapte conforme necessário */
     }
     .info {
         text-align: center;
     }
     .photo {
         margin-bottom: 10px;
-        /* Adapte conforme necessário */
     }
     .bio p {
         font-size: 14px;
-        /* Adapte conforme necessário */
     }
 }
 
@@ -739,13 +727,11 @@ body {
 @media only screen and (max-width: 576px) {
     .footer .logo-rodape {
         max-width: 300px;
-        /* Ajuste o tamanho máximo conforme necessário */
         margin: 0 auto;
         /* Centralizar a imagem */
     }
     .logo {
         max-width: 300px;
-        /* Ajuste o tamanho máximo conforme necessário */
         margin: 0 auto;
         /* Centralizar a imagem */
     }
@@ -817,9 +803,6 @@ body {
         width: 100%;
     }
 }
-
-
-/*Testando a partir daqui*/
 
 
 /* Estilos padrão para o menu */

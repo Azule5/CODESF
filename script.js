@@ -62,7 +62,6 @@ showSlides();
 
 //Fim do Slideshow
 
-//TESTANDO
 
 function toggleAccordion(element) {
     const body = element.nextElementSibling;
